@@ -32,9 +32,9 @@
 
                 return lerp(
                     lerp(dot(random2(p + float2(0.0, 0.0)), f - float2(0.0, 0.0)),
-                         dot(random2(p + float2(1.0, 0.0)), f - float2(1.0, 0.0)), u.x),
+                         dot(random2(p + float2(2.0, 0.0)), f - float2(1.0, 0.0)), u.x),
                     lerp(dot(random2(p + float2(0.0, 1.0)), f - float2(0.0, 1.0)),
-                         dot(random2(p + float2(1.0, 1.0)), f - float2(1.0, 1.0)), u.x),u.y
+                         dot(random2(p + float2(2.0, 1.0)), f - float2(1.0, 1.0)), u.x),u.y
                 );
             }
 

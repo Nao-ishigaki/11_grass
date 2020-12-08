@@ -55,17 +55,19 @@
             {
                 v2f output = (v2f)0;
                 float3 pos = float3(input[0].pos.x, 0, input[0].pos.z);
-                float height = input[0].pos.y;
+                float height = input[0].pos.y ;
                 fixed4 color = input[0].color;
 
-                float width = 0.05;// 草の太さ
+                float width = 0.05f;// 草の太さ
                 float4 p0 = mul(UNITY_MATRIX_VP, float4(pos + float3(+width, 0, 0), 1));
                 float4 p1 = mul(UNITY_MATRIX_VP, float4(pos + float3(-width, 0, 0), 1));
                 float4 p2 = mul(UNITY_MATRIX_VP, float4(pos + float3(input[0].force.x, height, input[0].force.y), 1));
 
+
+                
                 // 表
                 output.pos = p0;
-                output.color = color;
+                output.color = color + 0.2f;
                 outStream.Append(output);
                 output.pos = p1;
                 output.color = color;
@@ -77,7 +79,7 @@
 
                 // 裏
                 output.pos = p0;
-                output.color = color;
+                output.color = color + 0.2f;
                 outStream.Append(output);
                 output.pos = p2;
                 output.color = color;

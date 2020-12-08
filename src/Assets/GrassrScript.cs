@@ -33,7 +33,7 @@ public class GrassrScript : MonoBehaviour
                     10.0f * (((float)x + Random.value - 0.5f)/(float)NUM_X - 0.5f),
                     Random.value * 0.7f + 0.3f,// 高さの変数を入れる
                     10.0f * (((float)z + Random.value - 0.5f)/(float)NUM_Z - 0.5f),
-                    Random.value * 2.0f// 彩度の情報を入れる[0-2]
+                    Random.Range(0.5f,1.0f)*Random.value// 彩度の情報を入れる[0-2]
                     ));
             }
         }
